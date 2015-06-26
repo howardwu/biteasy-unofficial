@@ -1,0 +1,26 @@
+{
+  "name": "biteasy-unofficial",
+  "version": "1.0.0",
+  "description": "Package for requesting Bitcoin address and transaction information from Biteasy",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.58.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/howardwu/biteasy-unofficial.git"
+  },
+  "keywords": [
+    "address",
+    "bitcoin",
+    "biteasy",
+    "blockchain",
+    "transaction"
+  ],
+  "author": "Howard Wu",
+  "license": "BSD License",
+  "bugs": {
+    "url": "https://github.com/howardwu/biteasy-unofficial/issues"
+  },
+  "homepage": "https://github.com/howardwu/biteasy-unofficial#readme"
+}
