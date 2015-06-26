@@ -1,5 +1,9 @@
 # biteasy-unofficial
 
+## Introduction
+
+A Biteasy adapter built to standardize the output of requests to follow the bitcoind convention.
+
 ## Installation
 
 Install as you normally install an npm module:
@@ -9,9 +13,9 @@ Install as you normally install an npm module:
 
 ## Usage
 
-To use the biteasy API, simply require the module.
+To use the Biteasy API, simply require the module.
 ```
-  var biteasyAPI = require(biteasy-unofficial);
+  var biteasyAPI = require('biteasy-unofficial');
 ```
 
 ## Examples
