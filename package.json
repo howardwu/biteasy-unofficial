@@ -18,9 +18,13 @@
     "transaction"
   ],
   "author": "Howard Wu",
-  "license": "BSD License",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/howardwu/biteasy-unofficial/issues"
   },
-  "homepage": "https://github.com/howardwu/biteasy-unofficial#readme"
+  "homepage": "https://github.com/howardwu/biteasy-unofficial#readme",
+  "collaborators": {
+    "Howard Wu": "howardwu@berkeley.edu",
+    "Andrew Malta": "andrew.malta@yale.edu"
+  }
 }

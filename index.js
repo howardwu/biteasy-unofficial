@@ -34,11 +34,15 @@ function getWalletInfo(options, callback) {
           if (JSON.parse(body).status === 200 && JSON.parse(txs).status === 200) {
             var data = JSON.parse(body).data;
             var tx = JSON.parse(txs).data.transactions;
-            var result = {
-              balance: data.balance,
-              totalReceived: data.total_received,
-              totalSent: data.total_sent,
-              txCount: tx.length
+            var result = { 
+              result:
+                {
+                  balance: data.balance,
+                  totalReceived: data.total_received,
+                  totalSent: data.total_sent,
+                  txCount: tx.length,
+                  transactions: ["not provided"]
+                }
             };
             callback(null, result);
           }
@@ -165,7 +169,7 @@ function getTransaction(options, callback) {
 }
 
 /* Biteasy does not provide an endpoint for pushing 
- * transactions. Returns an error code: 404.
+ * transactions. Returns an error upon call.
  */
 function pushTransaction(options, callback) {
   callback('error no push support from biteasy', null);
