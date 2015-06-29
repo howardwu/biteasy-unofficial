@@ -1,6 +1,6 @@
 # biteasy-unofficial
 
-A Biteasy adapter built to standardize the output of requests to follow the union of the bitcoind and common-blockchain convention. Aliases are introduced in the return of functions to account for differences in convention between the two standards. It is our hope that the Bitcoin community will come to an agreement on proper style and convention for requests on addresses, transactions, and blocks.
+A Biteasy adapter built to standardize the output of requests to follow the common-blockchain convention. Aliases are introduced in the return of functions to account for differences in convention between the two standards. It is our hope that the Bitcoin community will come to an agreement on proper style and convention for requests on addresses, transactions, and blocks. More information on common-blockchain can be found here: https://github.com/common-blockchain/common-blockchain/.
 
 ## Installation
 
@@ -154,9 +154,13 @@ Transactions returns a JSON of transactions for the provided transaction IDs.
   });
 ```
 
+## Examples
+
+There are examples for using Addresses, Blocks, and Transactions, provided in the /examples folder. Each function includes a Mainnet and Testnet sample call and where possible, an invalid example is provided to show error handling. Expect all returns to be of the form (error, response).
+
 ## Convention
 
-Standard convention is described fully in the ```types.json``` file.
+Standard convention is described fully by common-blockchain in the ```types.json``` file: https://github.com/blockai/common-blockchain/blob/master/types.json
 
 ## Maintainers
   * Howard Wu (howardwu) - howardwu@berkeley.edu
