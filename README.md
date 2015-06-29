@@ -1,5 +1,7 @@
 # biteasy-unofficial
 
+[![Version](http://img.shields.io/npm/v/biteasy-unofficial.svg)](https://www.npmjs.org/package/biteasy-unofficial)
+
 A Biteasy adapter built to standardize the output of requests to follow the common-blockchain convention. Aliases are introduced in the return of functions to account for differences in convention between the two standards. It is our hope that the Bitcoin community will come to an agreement on proper style and convention for requests on addresses, transactions, and blocks. 
 
 [Information on common-blockchain for convention](https://github.com/common-blockchain/common-blockchain/blob/master/README.md)
