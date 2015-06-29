@@ -21,81 +21,81 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
 
 ### Addresses
 
-  ### biteasyAPI({ network: 'mainnet' }).Addresses.Summary
-  Summary returns a JSON of information regarding provided Bitcoin addresses.
-  ```
-    biteasyAPI({ network: 'mainnet' }).Addresses.Summary({
-      addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
-    }, function (err, resp) {
-      console.log(resp);
-    });
-  ```
+#### biteasyAPI({ network: 'mainnet' }).Addresses.Summary
+Summary returns a JSON of information regarding provided Bitcoin addresses.
+```
+  biteasyAPI({ network: 'mainnet' }).Addresses.Summary({
+    addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
+  }, function (err, resp) {
+    console.log(resp);
+  });
+```
 
-  ### biteasyAPI({ network: 'mainnet' }).Addresses.Transactions
-  Transactions returns a JSON with a list of transactions associated with the provided Bitcoin addresses.
-  ```
-    biteasyAPI({ network: 'mainnet' }).Addresses.Transactions({
-      addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
-    }, function (err, resp) {
-      console.log(resp);
-    });
+#### biteasyAPI({ network: 'mainnet' }).Addresses.Transactions
+Transactions returns a JSON with a list of transactions associated with the provided Bitcoin addresses.
+```
+  biteasyAPI({ network: 'mainnet' }).Addresses.Transactions({
+    addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
+  }, function (err, resp) {
+    console.log(resp);
+  });
 
-  ```
+```
 
-  ### biteasyAPI({ network: 'mainnet' }).Addresses.Unspents
-  Unspents returns a JSON with a list of unspent outputs for the provided Bitcoin addresses.
+#### biteasyAPI({ network: 'mainnet' }).Addresses.Unspents
+Unspents returns a JSON with a list of unspent outputs for the provided Bitcoin addresses.
 
-  ```
-    biteasyAPI({ network: 'mainnet' }).Addresses.Unspents({
-      addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
-    }, function (err, resp) {
-      console.log(resp);
-    });
-  ```
+```
+  biteasyAPI({ network: 'mainnet' }).Addresses.Unspents({
+    addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
+  }, function (err, resp) {
+    console.log(resp);
+  });
+```
 
 ### Blocks
 
-  ### biteasyAPI({ network: 'mainnet' }).Blocks.Get
-  Get returns a JSON of information for the provided block IDs.
-  ```
-    biteasyAPI({ network: 'mainnet' }).Blocks.Get({
-      blockIds: [
-        "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d", 
-        "00000000000000001034f207d3ce18f03054ddfb0e4dba712f5b76cb1cda9499"]
-    }, function (err, resp) {
-      console.log(resp);
-    });
-  ```
+### biteasyAPI({ network: 'mainnet' }).Blocks.Get
+Get returns a JSON of information for the provided block IDs.
+```
+  biteasyAPI({ network: 'mainnet' }).Blocks.Get({
+    blockIds: [
+      "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d", 
+      "00000000000000001034f207d3ce18f03054ddfb0e4dba712f5b76cb1cda9499"]
+  }, function (err, resp) {
+    console.log(resp);
+  });
+```
 
-  ### biteasyAPI({ network: 'mainnet' }).Blocks.Latest
-  Latest returns a JSON of the latest blocks to hit Biteasy's endpoint.
-  ```
-    biteasyAPI({ network: 'mainnet' }).Blocks.Latest(function (err, resp) {
-      console.log(resp);
-    });
-  ```
+### biteasyAPI({ network: 'mainnet' }).Blocks.Latest
+Latest returns a JSON of the latest blocks to hit Biteasy's endpoint.
+```
+  biteasyAPI({ network: 'mainnet' }).Blocks.Latest(function (err, resp) {
+    console.log(resp);
+  });
+```
 
-  ### biteasyAPI({ network: 'mainnet' }).Blocks.Propogate
-  Propogate is unsupported with Biteasy as of now. Any call to Propogate will return an error.
-  ```
-    biteasyAPI({ network: 'mainnet' }).Blocks.Propogate({
-      blockHex: ''
-    }, function (err, resp) {
-      console.log(resp);
-    });
-  ```
+### biteasyAPI({ network: 'mainnet' }).Blocks.Propogate
+Propogate is unsupported with Biteasy as of now. Any call to Propogate will return an error.
+```
+  biteasyAPI({ network: 'mainnet' }).Blocks.Propogate({
+    blockHex: ''
+  }, function (err, resp) {
+    console.log(resp);
+  });
+```
 
-  ### biteasyAPI({ network: 'mainnet' }).Blocks.Transactions
-  Transactions returns a JSON of transactions for the provided block IDs.
-  ```
-    biteasyAPI({ network: 'mainnet' }).Blocks.Transactions({
-      blockIds: [
-        "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d",
-        "00000000000000001034f207d3ce18f03054ddfb0e4dba712f5b76cb1cda9499"]
-    }, function (err, resp) {
-      console.log(resp);
-    });
-  ```
+### biteasyAPI({ network: 'mainnet' }).Blocks.Transactions
+Transactions returns a JSON of transactions for the provided block IDs.
+```
+  biteasyAPI({ network: 'mainnet' }).Blocks.Transactions({
+    blockIds: [
+      "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d",
+      "00000000000000001034f207d3ce18f03054ddfb0e4dba712f5b76cb1cda9499"]
+  }, function (err, resp) {
+    console.log(resp);
+  });
+```
 
 ### Transactions
 
