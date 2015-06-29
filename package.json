@@ -1,6 +1,6 @@
 {
   "name": "biteasy-unofficial",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Package for requesting Bitcoin address and transaction information from Biteasy",
   "main": "index.js",
   "dependencies": {
