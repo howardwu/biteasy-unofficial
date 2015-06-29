@@ -21,7 +21,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
 
 ### Addresses
 
-  #### biteasyAPI({ network: 'mainnet' }).Addresses.Summary
+  ### biteasyAPI({ network: 'mainnet' }).Addresses.Summary
   Summary returns a JSON of information regarding provided Bitcoin addresses.
   ```
     biteasyAPI({ network: 'mainnet' }).Addresses.Summary({
@@ -31,7 +31,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Addresses.Transactions
+  ### biteasyAPI({ network: 'mainnet' }).Addresses.Transactions
   Transactions returns a JSON with a list of transactions associated with the provided Bitcoin addresses.
   ```
     biteasyAPI({ network: 'mainnet' }).Addresses.Transactions({
@@ -42,7 +42,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
 
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Addresses.Unspents
+  ### biteasyAPI({ network: 'mainnet' }).Addresses.Unspents
   Unspents returns a JSON with a list of unspent outputs for the provided Bitcoin addresses.
 
   ```
@@ -55,7 +55,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
 
 ### Blocks
 
-  #### biteasyAPI({ network: 'mainnet' }).Blocks.Get
+  ### biteasyAPI({ network: 'mainnet' }).Blocks.Get
   Get returns a JSON of information for the provided block IDs.
   ```
     biteasyAPI({ network: 'mainnet' }).Blocks.Get({
@@ -67,7 +67,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Blocks.Latest
+  ### biteasyAPI({ network: 'mainnet' }).Blocks.Latest
   Latest returns a JSON of the latest blocks to hit Biteasy's endpoint.
   ```
     biteasyAPI({ network: 'mainnet' }).Blocks.Latest(function (err, resp) {
@@ -75,7 +75,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Blocks.Propogate
+  ### biteasyAPI({ network: 'mainnet' }).Blocks.Propogate
   Propogate is unsupported with Biteasy as of now. Any call to Propogate will return an error.
   ```
     biteasyAPI({ network: 'mainnet' }).Blocks.Propogate({
@@ -85,7 +85,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Blocks.Transactions
+  ### biteasyAPI({ network: 'mainnet' }).Blocks.Transactions
   Transactions returns a JSON of transactions for the provided block IDs.
   ```
     biteasyAPI({ network: 'mainnet' }).Blocks.Transactions({
@@ -99,7 +99,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
 
 ### Transactions
 
-  #### biteasyAPI({ network: 'mainnet' }).Transactions.Get
+  ### biteasyAPI({ network: 'mainnet' }).Transactions.Get
   Get returns a JSON with transaction data for provided transaction IDs.
   ```
     biteasyAPI({ network: 'mainnet' }).Transactions.Get({
@@ -111,7 +111,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Transactions.Latest
+  ### biteasyAPI({ network: 'mainnet' }).Transactions.Latest
   Latest returns a JSON of the latest transactions to hit Biteasy's endpoint (mostly unconfirmed).
   ```
     biteasyAPI({ network: 'mainnet' }).Transactions.Latest(function (err, resp) {
@@ -119,7 +119,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Transactions.Outputs
+  ### biteasyAPI({ network: 'mainnet' }).Transactions.Outputs
   Outputs returns a JSON of output information for provided transaction IDs.
   ```
     biteasyAPI({ network: 'mainnet' }).Transactions.Outputs({
@@ -134,7 +134,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Transactions.Propogate
+  ### biteasyAPI({ network: 'mainnet' }).Transactions.Propogate
   Propogate is unsupported with Biteasy as of now. Any call to Propogate will return an error.
   ```
     biteasyAPI({ network: 'mainnet' }).Transactions.Propogate({
@@ -144,7 +144,7 @@ For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a functio
     });
   ```
 
-  #### biteasyAPI({ network: 'mainnet' }).Transactions.Status
+  ### biteasyAPI({ network: 'mainnet' }).Transactions.Status
   Transactions returns a JSON of transactions for the provided transaction IDs.
   ```
     biteasyAPI({ network: 'mainnet' }).Transactions.Status({
