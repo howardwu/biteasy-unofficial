@@ -1,7 +1,5 @@
 # biteasy-unofficial
 
-## Introduction
-
 A Biteasy adapter built to standardize the output of requests to follow the union of the bitcoind and common-blockchain convention. Aliases are introduced in the return of functions to account for differences in convention between the two standards. It is our hope that the Bitcoin community will come to an agreement on proper style and convention for requests on addresses, transactions, and blocks.
 
 ## Installation
