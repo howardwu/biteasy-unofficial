@@ -1,6 +1,8 @@
 # biteasy-unofficial
 
-A Biteasy adapter built to standardize the output of requests to follow the common-blockchain convention. Aliases are introduced in the return of functions to account for differences in convention between the two standards. It is our hope that the Bitcoin community will come to an agreement on proper style and convention for requests on addresses, transactions, and blocks. More information on common-blockchain can be found here: https://github.com/common-blockchain/common-blockchain/.
+A Biteasy adapter built to standardize the output of requests to follow the common-blockchain convention. Aliases are introduced in the return of functions to account for differences in convention between the two standards. It is our hope that the Bitcoin community will come to an agreement on proper style and convention for requests on addresses, transactions, and blocks. 
+
+[Information on common-blockchain for convention](https://github.com/common-blockchain/common-blockchain/blob/master/README.md)
 
 ## Installation
 
@@ -12,16 +14,21 @@ Install as you normally install an npm module:
 ## Usage
 
 To use the Biteasy API, simply require the module.
-```
+```javascript
   var biteasyAPI = require('biteasy-unofficial');
 ```
 For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a function. For Testnet, use ```biteasyAPI({network: 'testnet'})``` when calling a function. By default, if no parameter is provided, Mainnet will be used.
+
+```javascript
+var commonBlockchain = biteasyAPI({ network: 'mainnet' });
+```
+[See abstract-common-blockchain for API](https://github.com/blockai/abstract-common-blockchain/blob/master/README.md)
 
 ### Addresses
 
 #### biteasyAPI({ network: 'mainnet' }).Addresses.Summary
 Summary returns a JSON of information regarding provided Bitcoin addresses.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Addresses.Summary({
     addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
   }, function (err, resp) {
@@ -31,7 +38,7 @@ Summary returns a JSON of information regarding provided Bitcoin addresses.
 
 #### biteasyAPI({ network: 'mainnet' }).Addresses.Transactions
 Transactions returns a JSON with a list of transactions associated with the provided Bitcoin addresses.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Addresses.Transactions({
     addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
   }, function (err, resp) {
@@ -43,7 +50,7 @@ Transactions returns a JSON with a list of transactions associated with the prov
 #### biteasyAPI({ network: 'mainnet' }).Addresses.Unspents
 Unspents returns a JSON with a list of unspent outputs for the provided Bitcoin addresses.
 
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Addresses.Unspents({
     addresses: ["1HUTmSsFp9Rg4FYRftp85GGyZFEndZSoeq", "1DmUeGjuQWLHxq5jhyn3uPCD9N16Ar9xGw"]
   }, function (err, resp) {
@@ -55,7 +62,7 @@ Unspents returns a JSON with a list of unspent outputs for the provided Bitcoin 
 
 #### biteasyAPI({ network: 'mainnet' }).Blocks.Get
 Get returns a JSON of information for the provided block IDs.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Blocks.Get({
     blockIds: [
       "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d", 
@@ -67,7 +74,7 @@ Get returns a JSON of information for the provided block IDs.
 
 #### biteasyAPI({ network: 'mainnet' }).Blocks.Latest
 Latest returns a JSON of the latest blocks to hit Biteasy's endpoint.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Blocks.Latest(function (err, resp) {
     console.log(resp);
   });
@@ -75,7 +82,7 @@ Latest returns a JSON of the latest blocks to hit Biteasy's endpoint.
 
 #### biteasyAPI({ network: 'mainnet' }).Blocks.Propogate
 Propogate is unsupported with Biteasy as of now. Any call to Propogate will return an error.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Blocks.Propogate({
     blockHex: ''
   }, function (err, resp) {
@@ -85,7 +92,7 @@ Propogate is unsupported with Biteasy as of now. Any call to Propogate will retu
 
 #### biteasyAPI({ network: 'mainnet' }).Blocks.Transactions
 Transactions returns a JSON of transactions for the provided block IDs.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Blocks.Transactions({
     blockIds: [
       "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d",
@@ -99,7 +106,7 @@ Transactions returns a JSON of transactions for the provided block IDs.
 
 #### biteasyAPI({ network: 'mainnet' }).Transactions.Get
 Get returns a JSON with transaction data for provided transaction IDs.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Transactions.Get({
     txIds: [
       "186efd8689fc403e5cc6faeef9497fcf177750b52afe55f407244d0c95625836",
@@ -111,7 +118,7 @@ Get returns a JSON with transaction data for provided transaction IDs.
 
 #### biteasyAPI({ network: 'mainnet' }).Transactions.Latest
 Latest returns a JSON of the latest transactions to hit Biteasy's endpoint (mostly unconfirmed).
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Transactions.Latest(function (err, resp) {
     console.log(resp);
   });
@@ -119,7 +126,7 @@ Latest returns a JSON of the latest transactions to hit Biteasy's endpoint (most
 
 #### biteasyAPI({ network: 'mainnet' }).Transactions.Outputs
 Outputs returns a JSON of output information for provided transaction IDs.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Transactions.Outputs({
     outputs: [
       {
@@ -134,7 +141,7 @@ Outputs returns a JSON of output information for provided transaction IDs.
 
 #### biteasyAPI({ network: 'mainnet' }).Transactions.Propogate
 Propogate is unsupported with Biteasy as of now. Any call to Propogate will return an error.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Transactions.Propogate({
     hex: ''
   }, function (err, resp) {
@@ -144,7 +151,7 @@ Propogate is unsupported with Biteasy as of now. Any call to Propogate will retu
 
 #### biteasyAPI({ network: 'mainnet' }).Transactions.Status
 Transactions returns a JSON of transactions for the provided transaction IDs.
-```
+```javascript
   biteasyAPI({ network: 'mainnet' }).Transactions.Status({
     txIds: [
       "186efd8689fc403e5cc6faeef9497fcf177750b52afe55f407244d0c95625836",
