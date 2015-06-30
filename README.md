@@ -15,6 +15,8 @@ Install as you normally install an npm module:
 
 ## Usage
 
+Run ``` npm install ``` to have all necessary node modules installed.
+
 To use the Biteasy API, simply require the module.
 ```javascript
   var biteasyAPI = require('biteasy-unofficial');
