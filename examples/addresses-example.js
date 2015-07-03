@@ -24,7 +24,6 @@ biteasyAPI({ network: 'mainnet' }).Addresses.Summary([
   console.log(resp);
 });
 
-
 /** TRANSACTIONS **/
 
 biteasyAPI({ network: 'mainnet' }).Addresses.Transactions([
@@ -48,7 +47,6 @@ biteasyAPI({ network: 'mainnet' }).Addresses.Transactions([
   if (err) console.log(err);
   console.log(resp);
 });
-
 
 /** UNSPENTS **/
 
