@@ -133,6 +133,7 @@ biteasyAPI({ network: 'testnet' }).Transactions.Get([
   console.log(resp);
 });
 
+// Invalid Example
 biteasyAPI({ network: 'mainnet' }).Transactions.Get([
   "0s9049t4094u093jaie0930ej9a309jra903r0a9w3ur09aw3i903ie093ia09uta09"
 ], function (err, resp) {
@@ -198,6 +199,7 @@ biteasyAPI({ network: 'mainnet' }).Transactions.Outputs([
 
 /** PROPAGATE **/
 
+// Unsupported Function
 biteasyAPI({ network: 'mainnet' }).Transactions.Propagate({
   hex: ''
 }, function (err, resp) {
@@ -205,6 +207,7 @@ biteasyAPI({ network: 'mainnet' }).Transactions.Propagate({
   console.log(resp);
 });
 
+// Unsupported Function
 biteasyAPI({ network: 'testnet' }).Transactions.Propagate({
   hex: ''
 }, function (err, resp) {
@@ -230,6 +233,7 @@ biteasyAPI({ network: 'testnet' }).Transactions.Status([
   console.log(resp);
 });
 
+// Invalid Example
 biteasyAPI({ network: 'mainnet' }).Transactions.Status([
   "0s9049t4094u093jaie0930ej9a309jra903r0a9w3ur09aw3i903ie093ia09uta"
 ], function (err, resp) {

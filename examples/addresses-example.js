@@ -17,6 +17,7 @@ biteasyAPI({ network: 'testnet' }).Addresses.Summary([
   console.log(resp);
 });
 
+// Invalid Example
 biteasyAPI({ network: 'mainnet' }).Addresses.Summary([
   "abcdefghijklmnopqrstuvxyz1234567890"
 ], function (err, resp) {
@@ -41,6 +42,7 @@ biteasyAPI({ network: 'testnet' }).Addresses.Transactions([
   console.log(resp);
 });
 
+// Invalid Example
 biteasyAPI({ network: 'mainnet' }).Addresses.Transactions([
   "abcdefghijklmnopqrst"
 ], function (err, resp) {
@@ -65,6 +67,7 @@ biteasyAPI({ network: 'testnet' }).Addresses.Unspents([
   console.log(resp);
 });
 
+// Invalid Example
 biteasyAPI({ network: 'mainnet' }).Addresses.Unspents([
   "asdfghjkl"
 ], function (err, resp) {

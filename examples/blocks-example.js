@@ -17,6 +17,7 @@ biteasyAPI({ network: 'testnet' }).Blocks.Get([
   console.log(resp);
 });
 
+// Invalid Example
 biteasyAPI({ network: 'mainnet' }).Blocks.Get([
   "29384792387042379481703948710983749018374098137409817304987139"
 ], function (err, resp) {
