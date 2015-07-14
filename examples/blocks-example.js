@@ -38,6 +38,7 @@ biteasyAPI({ network: 'testnet' }).Blocks.Latest(function (err, resp) {
 
 /** PROPAGATE **/
 
+// Unsupported Function
 biteasyAPI({ network: 'mainnet' }).Blocks.Propagate({
   blockHex: ''
 }, function (err, resp) {
@@ -45,6 +46,7 @@ biteasyAPI({ network: 'mainnet' }).Blocks.Propagate({
   console.log(resp);
 });
 
+// Unsupported Function
 biteasyAPI({ network: 'testnet' }).Blocks.Propagate({
   blockHex: ''
 }, function (err, resp) {
@@ -54,6 +56,7 @@ biteasyAPI({ network: 'testnet' }).Blocks.Propagate({
 
 /** TRANSACTIONS **/
 
+// Unsupported Function
 biteasyAPI({ network: 'mainnet' }).Blocks.Transactions([
   "00000000000000000216a936ebc1962e319a51bab8d3eae69335ac940284491d",
   "00000000000000001034f207d3ce18f03054ddfb0e4dba712f5b76cb1cda9499"
@@ -62,6 +65,7 @@ biteasyAPI({ network: 'mainnet' }).Blocks.Transactions([
   console.log(resp);
 });
 
+// Unsupported Function
 biteasyAPI({ network: 'testnet' }).Blocks.Transactions([
   "00000000000d8087a4cea66ad90d890ed05c9059a0323d20463d0635aff6056f"
 ], function (err, resp) {
