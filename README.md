@@ -24,6 +24,17 @@ To use the Biteasy API, simply require the module.
 ```
 For Mainnet, use ```biteasyAPI({ network: 'mainnet' })``` when calling a function. For Testnet, use ```biteasyAPI({ network: 'testnet' })``` when calling a function. By default, if no parameter is provided, Mainnet will be used.
 
+## Known Issues
+
+Biteasy currently only returns the confirmed balance of an address when requested. Therefore, our parameters for ```balance```, ```confirmedBalance```, and ```unconfirmedBalance``` are specified as such: 
+```
+  {
+    balance: null,
+    confirmedBalance: 0.0,
+    unconfirmedBalance: null
+  }
+```
+
 ## Tests
 
 Run ``` npm test ``` to have [abstract-common-blockchain](https://github.com/blockai/abstract-common-blockchain/blob/master/README.md) run a suite of tests on Addresses, Blocks, and Transactions. The tests are comprehensive with complete code coverage - see documentation in abstract-common-blockchain for further details.
